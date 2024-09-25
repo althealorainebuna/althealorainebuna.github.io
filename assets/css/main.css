@@ -1,16 +1,5 @@
-/**
-* Template Name: iPortfolio
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Updated: Jun 29 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
+/* Font */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
@@ -19,10 +8,10 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --default-color: white;
+  --default-color: wheat;
   --background-color: black; /* Black navbar */
   --accent-color: #FF5722;
-  --contrast-color: white;
+  --contrast-color: wheat;
   --nav-color: #E25822;
   --nav-hover-color: #E25822; /* Orange on hover */
   --heading-color: navy; /* Navy blue for headings */
@@ -289,7 +278,7 @@ h6 {
   color: var(--default-color);
   background-color: #1a142b;
   font-size: 14px;
-  padding: 40px 0;
+  padding: 30px 0;
   position: relative;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
@@ -300,9 +289,37 @@ h6 {
 
 .footer .credits {
   margin-top: 4px;
-  font-size: 13px;
+  font-size: 5px;
   text-align: center;
 }
+
+.footersitename {
+  color: wheat;               /* Text color */
+  font-size: x-large;        /* Font size */
+  font-weight: 700;          /* Font weight */
+  margin-bottom: 10px;       /* Space below the site name */
+}
+
+.footer .socials {
+  display: flex;              /* Flexbox for alignment */
+  justify-content: center;    /* Center the social icons */
+  gap: 15px;                 /* Space between icons */
+  margin-bottom: 5px;       /* Space below social icons */
+}
+
+.footer .socials a {
+  color: wheat;              /* Icon color */
+  font-size: 22px;          /* Icon size */
+  transition: color 0.3s;   /* Smooth color transition */
+}
+
+.footer .socials a:hover {
+  color: rgb(255, 60, 0);             /* Change color on hover */
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -631,7 +648,7 @@ section,
   max-width: 500px; /* Set a maximum width */
   height: 200%; /* Maintain aspect ratio */
   animation: floatGlow 3s ease-in-out infinite alternate, minimalFloat 5s ease-in-out infinite;
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.8); /* Orange glow */
+  box-shadow: 0 0 20px rgba(255, 85, 0, 0.888); /* Orange glow */
   transition: transform 0.3s ease;
 }
 
@@ -802,7 +819,7 @@ section,
 }
 
 .stats .stats-item i {
-  color: var(--accent-color);
+  color: orangered;
   display: block;
   font-size: 44px;
   float: left;
@@ -810,16 +827,16 @@ section,
 }
 
 .stats .stats-item .purecounter {
-  color: var(--heading-color);
+  color:rgb(6, 6, 248);
   font-size: 48px;
   line-height: 40px;
   display: block;
-  font-weight: 700;
+  font-weight: 900;
   margin-left: 60px;
 }
 
 .stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   padding: 15px 0 0 0;
   margin: 0 0 0 60px;
   font-family: var(--heading-font);
@@ -990,6 +1007,26 @@ section,
   margin-right: 0;
 }
 
+/* Basic hover effect for portfolio filters */
+.portfolio-filters li {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.portfolio-filters li:hover {
+  background-color: #ff6600; /* Orange hover color */
+  color: white;
+}
+
+/* Active class styling */
+.portfolio-filters .filter-active {
+  background-color: #f24a07; /* Black background for the active filter */
+  color: white; /* White text color */
+}
+
+
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
@@ -1067,6 +1104,92 @@ section,
 .portfolio .portfolio-content:hover img {
   transform: scale(1.1);
 }
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  min-height: 320px;
+  
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 80px;
+  border-radius: 50%;
+  margin: -40px 0 0 40px;
+  position: relative;
+  z-index: 2;
+  border: 4px solid rgb(242, 93, 6);
+
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 45px;
+  color: wheat;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: wheat;
+  margin: 0 0 0 45px;
+}
+
+.testimonials .testimonial-item .fa-quote-left,
+.testimonials .testimonial-item .fa-quote-right {
+  color: rgba(242, 65, 6, 0.985);
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 15px 0 15px;
+  padding: 20px 20px 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  border-radius: 6px;
+  position: relative;
+  z-index: 1;
+  border: 4px solid rgb(122, 118, 117);
+  color: wheat;
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: rgba(252, 249, 251, 0.3);
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fc6209;
+}
+
 
 /*--------------------------------------------------------------
 # Contact Section
